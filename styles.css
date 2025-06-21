@@ -1,0 +1,605 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body, html {
+  width: 100%;
+}
+@font-face {
+    font-family: 'josefin-thin';
+    src: url(JosefinSans-Thin.ttf);
+}
+@font-face {
+    font-family: 'josefin-regular';
+    src: url(JosefinSans-Regular.ttf);
+}
+
+/* navbar css started */
+.header{
+    padding: 20px 20px;
+    background-color: #270082;
+    color: white;
+}
+.bars{display: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 0px;
+}
+
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    padding: 10px 20px;
+}
+.nav-links ul li{
+    display: inline-block;
+}
+.nav-links ul a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 10px 0;
+  font-size: 2.5rem;
+  font-family: josefin, sans-serif;
+  font-weight: 100;
+
+  
+}
+
+
+.nav-links ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-links ul a:hover::after {
+  width: 100%;
+}
+.logo{
+    font-size: 2.5rem;
+    font-family: josefin, sans-serif;
+}
+
+@media (max-width:1024px) {
+    html{
+        font-size: 45%;
+    }
+    .nav-links{
+        display: none;
+    }
+    .bars{
+        display: block;
+        font-size: 3rem;
+        color: white;
+    }
+    
+}
+@media (max-width: 400px) {
+    
+    .nav-links{
+        display: none;
+    }
+    .bars{
+        display: block;
+        font-size: 3rem;
+        color: white;
+    }
+    
+}
+/* navbar css ended */
+
+
+
+/* hero section css started */
+.hero-section{
+    background-color: #281154;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;              
+    max-width: 90vw;          
+    padding: 0 2rem;          
+    box-sizing: border-box;
+}
+.hero-heading{
+    font-size: 14rem;
+    color: white;
+    font-weight: 100;
+    font-family: josefin, sans-serif;
+    margin-bottom: 30px;
+}
+.hero-headingtwo{
+    font-size: 4.5rem;
+    color: white;
+    font-weight: 100;
+    font-family: josefin-regular;
+    margin-bottom: 30px;
+}
+
+.hero-para{
+    margin-top: 20px;
+    font-size: 2.6rem;
+    color: white;
+    font-weight: 600;
+    font-family: josefin-thin;
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .hero-heading {
+    font-size: 6rem;
+  }
+  .hero-headingtwo {
+    font-size: 4.5rem;
+  }
+  .hero-para {
+    font-size: 3rem;
+  }
+  .hero-img{
+    filter: brightness(45%);
+  }
+}
+@media (max-width: 600px) {
+  .hero-heading {
+    font-size: 4rem;
+  }
+  .hero-headingtwo {
+    font-size: 2rem;
+  }
+  .hero-para {
+    font-size: 1.5rem;
+  }
+  .hero-img{
+    filter: brightness(45%);
+  }
+}
+
+
+/* hero section css ended */
+
+/* music section css started */
+.music-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #281154;
+    height: 130vh;
+
+}
+.music-content {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.music-heading{
+    font-size: 7rem;
+    font-family: josefin, sans-serif;
+    font-weight: 100;
+}
+.music-headingtwo{
+    font-size: 2.5rem;
+    font-family: josefin, sans-serif;
+
+}
+.music-para{
+    font-size: 2rem;
+    font-family: josefin, sans-serif;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 10px 20px;
+}
+.music-btn{
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: josefin, sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.music-btn:hover{
+    background-color: black;
+    color: white;
+     transform: scale(1.1);
+}
+.music-paratwo{
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: josefin-thin;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .music-container{
+        height: 70vh;
+    }
+    
+    .music-heading{
+        font-size: 5rem;
+    }
+    .music-headingtwo{
+        font-size: 2.5rem;
+    }
+    .music-para{
+        font-size: 2.2rem;
+    }
+    .music-paratwo{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    
+    .music-heading{
+        font-size: 4rem;
+    }
+    .music-headingtwo{
+        font-size: 2.2rem;
+    }
+    .music-para{
+        font-size: 1.5rem;
+    }
+    .music-paratwo{
+        font-size: 1.2rem;
+    }
+    .music-btn{
+        font-size: 1.5rem;
+        padding: 10px 15px;
+    }
+}
+
+/* music section css ended */
+
+/* collection css started */
+
+.collection-container {
+  text-align: center;
+}
+
+.ipad-img {
+  width: 65%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-40px); 
+}
+
+.content-two{
+  font-family: josefin, sans-serif;
+  margin: 0 auto;
+}
+.content-h{
+    font-size: 3.8rem;
+    font-family: josefin-regular;
+    font-weight: 500;
+    margin: 30px 0;
+    padding: 0px 20px;
+}
+.content-parah{
+    font-size: 2.5rem;
+    font-family: josefin-thin;
+    font-weight: 600;
+    margin: 30px 0;
+    line-height: 1.3;
+
+}
+.content-btn{
+    padding: 10px 15px;
+    margin-bottom: 50px;
+    background-color: #281154;
+    font-family: josefin, sans-serif;
+    font-size: 1.7rem;
+    color: white;
+    cursor: pointer;
+}
+.mac-image{
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+    .ipad-img {
+        width: 80%;
+    }
+    .content-h{
+        font-size: 3.5rem;
+    }
+    .content-parah{
+        font-size: 2.7rem;
+        padding: 10px 20px;
+    }
+    .content-btn{
+        font-size: 1.6rem;
+        padding: 8px 12px;
+    }
+    .mac-image{
+        width: 90%;
+    }
+}
+@media (max-width: 600px) {
+    .ipad-img {
+        width: 90%;
+    }
+    .content-h{
+        font-size: 2.5rem;
+    }
+    .content-parah{
+        font-size: 2.2rem;
+    }
+    .content-btn{
+        font-size: 1.5rem;
+        padding: 10px 12px;
+    }
+    .mac-image{
+        width: 90%;
+    }
+}
+/* collection css ended */
+
+
+/* Entertainment css started */
+
+.en-container{
+    background-image: url(video.png);
+    width: 100%;
+    height: 123vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.en-heading{
+    font-size: 4rem;
+    font-family: josefin-regular;
+    font-weight: 100;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.en-para{
+    font-size: 2.8rem;
+    font-family: josefin-thin;
+    font-weight: 600;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+@media (max-width: 1024px) {
+    .en-container{
+        height: 80vh;
+    }
+    .en-heading{
+        font-size: 4rem;
+    }
+    .en-para{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 600px) {
+    
+    .en-heading{
+        font-size: 3rem;
+    }
+    .en-para{
+        font-size: 2.5rem;
+    }
+}
+/* Entertainment css ended */
+
+/* Gift card css started */
+
+.gift-container{
+    background-color: white;
+    width: 100%;
+    height: 90vh;
+    gap: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.gift-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.gift-img{
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+    height: auto;
+
+}
+.gift-image, .gift-content {
+    flex: 1 1 350px;
+    max-width: 600px;
+    height: auto;
+}
+.gift-heading{
+    font-size: 3.5rem;
+    font-family: josefin-regular;
+    font-weight: 500;
+
+}
+.gift-para{
+    font-size: 2.4rem;
+    font-family: josefin-thin;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 300;
+}
+
+.gift-subheading{
+    font-size: 2rem;
+    font-family: josefin-regular;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.gift-btn{
+    background-color: #281154;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: josefin, sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Gift card css ended */
+
+
+/* Footer css started */
+
+.footer-container{
+    background-color: #281154;
+    color: white;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+.footer-links{
+    flex: 1 1 150px;    
+  max-width: 180px;    
+}
+.footer-wide{
+    flex: 1 1 200px;   
+  max-width: 240px;   
+}
+
+.footer-links ul{
+    list-style: none;
+    padding-top: 20px;
+}
+.footer-links ul li{
+    margin-bottom: 10px;
+}
+.footer-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-family: josefin-thin;
+    font-weight: 600;
+}
+.footer-heading{
+    padding-bottom: 5px;
+    font-size: 2.4rem;
+    font-family: josefin-regular;
+    font-weight: 600;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    
+    
+}
+
+.footer-bottom{
+    background-color: #270082;
+    padding: 20px 0;
+}
+.footer-text{
+    text-align: center;
+    font-size: 2rem;
+    font-family: josefin-thin;
+    color: white;
+    font-weight: 600;
+}
+@media (max-width: 1024px) {
+    .footer-heading{
+        font-size: 2rem;
+    }
+    .footer-links ul li a{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+        align-items:center;
+    text-align: center;  
+ }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-links {
+        max-width: 100%;
+        width: 100%;
+    }
+    .footer-wide {
+        max-width: 100%;
+        width: 100%;
+        max-height: 150px;
+
+    .footer-heading{
+        font-size: 2rem;
+    }
+
+    .footer-links ul li a {
+        font-size: 1.5rem;
+    }
+
+    .footer-text {
+        font-size: 1.6rem;
+    }
+}
+}
